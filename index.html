@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 140px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(216, 223, 236);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+
+        header {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            padding-top: 0px;
+        }
+
+        .input {
+            margin: 5px;
+        }
+
+        #input {
+            height: 30px;
+            width: 200px;
+            background-color: rgb(218, 236, 230);
+            border: 3px solid black;
+        }
+
+        #click {
+            font-weight: 600;
+            height: 30px;
+            width: 100px;
+            border: 2px solid black;
+        }
+
+        #click:hover {
+            color: beige;
+            background-color: rgb(39, 76, 58);
+        }
+
+        #click:active {
+            color: beige;
+            background-color: rgb(85, 168, 128);
+        }
+
+        .Ans {
+            height: 40px;
+            color: Red;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            top: -20px;
+        }
+
+
+        .con {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            translate: -50% -50%;
+            text-align: center;
+            font-weight: 900;
+            font-size: 30px;
+            color: yellow;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 0px 3px 10px rgb(0, 0, 0);
+            animation: zoom-in-zoom-out 2s ease infinite;
+        }
+
+        @keyframes zoom-in-zoom-out {
+            0% {
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.5, 1.5);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <header>Guess the number</header>
+        <div class="input">
+            <input id="input" type="text" placeholder="Enter number 1-100...">
+        </div>
+        <div class="Ans"></div>
+        <div class="click">
+            <button type="button" id="click" onclick="Eclick()">Enter</button>
+        </div>
+    </div>
+    <script src="guess.js"></script>
+</body>
+
+</html>
